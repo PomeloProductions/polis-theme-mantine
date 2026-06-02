@@ -1,5 +1,5 @@
 {
-  "name": "@polis/theme-cc",
+  "name": "@polis/theme-mantine",
   "version": "0.1.0",
   "description": "Card Collecting theme for Polis-family apps (SCSS variables, fonts, base elements, responsive helpers, Mantine theme overrides).",
   "type": "module",

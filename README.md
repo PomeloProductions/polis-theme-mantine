@@ -1,4 +1,4 @@
-# @polis/theme-cc
+# @polis/theme-mantine
 
 Card Collecting theme for Polis-family apps. Bundles the SCSS variables, font
 hooks, base element styles, and responsive helpers used by the Card Collecting
@@ -15,7 +15,7 @@ In a consuming app's `package.json`:
 ```jsonc
 {
   "dependencies": {
-    "@polis/theme-cc": "github:PomeloProductions/polis-theme-cc#v0.1.0"
+    "@polis/theme-mantine": "github:PomeloProductions/polis-theme-mantine#v0.1.0"
   }
 }
 ```
@@ -24,7 +24,7 @@ In a consuming app's `package.json`:
 
 ```tsx
 import { MantineProvider } from '@mantine/core';
-import { theme } from '@polis/theme-cc';
+import { theme } from '@polis/theme-mantine';
 
 export function App({ children }) {
   return (
@@ -41,15 +41,15 @@ Import the aggregate entrypoint, which pulls in Bootstrap, fonts, variables,
 base elements, and responsive helpers:
 
 ```scss
-@import '@polis/theme-cc/styles/main';
+@import '@polis/theme-mantine/styles/main';
 ```
 
 Or pull partials individually:
 
 ```scss
-@import '@polis/theme-cc/styles/variables';
-@import '@polis/theme-cc/styles/elements';
-@import '@polis/theme-cc/styles/responsive';
+@import '@polis/theme-mantine/styles/variables';
+@import '@polis/theme-mantine/styles/elements';
+@import '@polis/theme-mantine/styles/responsive';
 ```
 
 The Bootstrap import in `main.scss` uses the `~bootstrap/...` resolver, which
