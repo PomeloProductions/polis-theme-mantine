@@ -20,15 +20,41 @@ In a consuming app's `package.json`:
 }
 ```
 
-## Use the Mantine theme
+## Use the Polis theme (recommended)
+
+`@polis/theme-mantine` exports a `theme: PolisTheme` object that
+satisfies the canonical interface in `@polis/react/theme/PolisTheme`.
+Pass it to `<PolisProvider>` from `@polis/react`:
 
 ```tsx
-import { MantineProvider } from '@mantine/core';
+import { PolisProvider } from '@polis/react';
 import { theme } from '@polis/theme-mantine';
 
 export function App({ children }) {
   return (
-    <MantineProvider theme={theme} defaultColorScheme="auto">
+    <PolisProvider theme={theme}>
+      {children}
+    </PolisProvider>
+  );
+}
+```
+
+`PolisProvider` injects every token as a `--polis-*` CSS custom
+property and wraps children in `<MantineProvider>` using the theme's
+embedded `mantineTheme` override. Swap themes by changing only the
+import on the second line.
+
+## Use the Mantine theme standalone
+
+If you only need the Mantine overrides:
+
+```tsx
+import { MantineProvider } from '@mantine/core';
+import { mantineTheme } from '@polis/theme-mantine';
+
+export function App({ children }) {
+  return (
+    <MantineProvider theme={mantineTheme} defaultColorScheme="auto">
       {children}
     </MantineProvider>
   );

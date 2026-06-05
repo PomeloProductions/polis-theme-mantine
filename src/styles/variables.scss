@@ -2,9 +2,47 @@
  * Theme Variables
  * ----------------------------------------------------------------------------
  * Custom variables for the application theme
+ *
+ * The `--polis-*` block mirrors the token values exported from `theme.ts`
+ * (`@polis/theme-mantine`) as CSS custom-property defaults. Consumers that
+ * import just the SCSS — without going through `<PolisProvider>` from
+ * `@polis/react` — still get a styled surface. When `<PolisProvider>` is
+ * mounted it will overwrite these on `document.documentElement`, so
+ * runtime theme swaps still take precedence.
  */
 
 :root {
+	/* ── Polis canonical tokens (mirrors src/theme.ts) ── */
+	--polis-color-primary: #4c6ef5;
+	--polis-color-primary-hover: #4263eb;
+	--polis-color-primary-active: #3b5bdb;
+	--polis-color-surface: #ffffff;
+	--polis-color-surface-alt: #f8f9fa;
+	--polis-color-text-primary: #212529;
+	--polis-color-text-muted: #868e96;
+	--polis-color-border: #dee2e6;
+	--polis-color-success: #40c057;
+	--polis-color-warning: #fab005;
+	--polis-color-danger: #fa5252;
+	--polis-color-info: #15aabf;
+
+	--polis-font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--polis-font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--polis-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+	--polis-radius-sm: 4px;
+	--polis-radius-md: 8px;
+	--polis-radius-lg: 12px;
+	--polis-radius-full: 9999px;
+
+	--polis-spacing-xs: 4px;
+	--polis-spacing-sm: 8px;
+	--polis-spacing-md: 16px;
+	--polis-spacing-lg: 24px;
+	--polis-spacing-xl: 32px;
+
+	/* ── Legacy palette (kept for backward-compat with components that haven't
+	 *    yet migrated off the older `--color-*` variable names) ── */
 	/* Primary Colors */
 	--color-primary: #fe9024;
 	--color-primary-rgb: 56, 128, 255;

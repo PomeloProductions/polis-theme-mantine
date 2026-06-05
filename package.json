@@ -20,15 +20,20 @@
   ],
   "peerDependencies": {
     "@mantine/core": ">=7",
+    "@polis/react": "github:PomeloProductions/polis-react",
     "react": ">=18"
   },
   "peerDependenciesMeta": {
+    "@polis/react": {
+      "optional": true
+    },
     "react": {
       "optional": true
     }
   },
   "devDependencies": {
     "@mantine/core": "^7.17.8",
+    "@polis/react": "github:PomeloProductions/polis-react#feat/swappable-theming-tokens",
     "typescript": "^5.8.3"
   }
 }
