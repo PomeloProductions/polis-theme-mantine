@@ -31,9 +31,22 @@
       "optional": true
     }
   },
+  "scripts": {
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint . --fix && prettier --write ."
+  },
   "devDependencies": {
+    "@eslint/js": "^9.18.0",
     "@mantine/core": "^7.17.8",
-    "@polis/react": "github:PomeloProductions/polis-react#feat/swappable-theming-tokens",
-    "typescript": "^5.8.3"
+    "@polis/react": "github:PomeloProductions/polis-react",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.20.0"
   }
 }
