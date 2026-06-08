@@ -1,1 +1,1 @@
-export { theme, default } from './theme';
+export { theme, mantineTheme, default } from './theme';
