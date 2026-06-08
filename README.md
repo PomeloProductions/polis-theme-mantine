@@ -15,8 +15,8 @@ In a consuming app's `package.json`:
 ```jsonc
 {
   "dependencies": {
-    "@polis/theme-mantine": "github:PomeloProductions/polis-theme-mantine#v0.1.0"
-  }
+    "@polis/theme-mantine": "github:PomeloProductions/polis-theme-mantine#v0.1.0",
+  },
 }
 ```
 
@@ -31,11 +31,7 @@ import { PolisProvider } from '@polis/react';
 import { theme } from '@polis/theme-mantine';
 
 export function App({ children }) {
-  return (
-    <PolisProvider theme={theme}>
-      {children}
-    </PolisProvider>
-  );
+  return <PolisProvider theme={theme}>{children}</PolisProvider>;
 }
 ```
 
