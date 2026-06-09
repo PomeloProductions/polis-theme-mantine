@@ -34,9 +34,6 @@
     "react": ">=18"
   },
   "peerDependenciesMeta": {
-    "@polis/react": {
-      "optional": true
-    },
     "react": {
       "optional": true
     }
