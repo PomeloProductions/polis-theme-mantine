@@ -59,8 +59,8 @@ export function App({ children }) {
 
 ## Use the SCSS
 
-Import the aggregate entrypoint, which pulls in Bootstrap, fonts, variables,
-base elements, and responsive helpers:
+Import the aggregate entrypoint, which pulls in fonts, variables, base
+elements, and responsive helpers:
 
 ```scss
 @import '@polis/theme-mantine/styles/main';
@@ -74,10 +74,6 @@ Or pull partials individually:
 @import '@polis/theme-mantine/styles/responsive';
 ```
 
-The Bootstrap import in `main.scss` uses the `~bootstrap/...` resolver, which
-relies on your bundler resolving from `node_modules`. Make sure `bootstrap` is
-installed in the consuming app.
-
 ## Contents
 
 ```
@@ -87,7 +83,7 @@ src/
   styles/
     variables.scss      # CSS custom properties (light + dark palettes)
     fonts.scss          # placeholder for @font-face declarations
-    main.scss           # aggregate entrypoint: bootstrap + partials
+    main.scss           # aggregate entrypoint: pulls in the partials below
     elements.scss       # base element + UI primitive styles
     responsive.scss     # breakpoint helpers + utility classes
 ```
