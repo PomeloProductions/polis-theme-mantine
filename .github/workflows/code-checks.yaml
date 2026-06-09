@@ -1,0 +1,40 @@
+name: Code Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  type-check:
+    name: TypeScript (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        # No lockfile or test runner here; install resolves devDeps
+        # (typescript, @mantine/core peer, @polis/react) so `tsc --noEmit`
+        # can resolve all type references.
+        run: npm install --no-audit --no-fund
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Lint (ESLint + Prettier)
+        # Conservative gate: eslint rules are mostly `warn`, prettier --check
+        # blocks if formatting drifts. Promote warns to errors in a follow-up
+        # once the codebase is at zero warnings.
+        run: npm run lint
