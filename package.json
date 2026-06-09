@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "description": "Card Collecting theme for Polis-family apps (SCSS variables, fonts, base elements, responsive helpers, Mantine theme overrides).",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PomeloProductions/polis-theme-mantine.git"
+  },
+  "keywords": [
+    "polis",
+    "theme",
+    "mantine"
+  ],
   "main": "src/index.ts",
   "types": "src/index.ts",
   "exports": {
@@ -24,9 +34,6 @@
     "react": ">=18"
   },
   "peerDependenciesMeta": {
-    "@polis/react": {
-      "optional": true
-    },
     "react": {
       "optional": true
     }

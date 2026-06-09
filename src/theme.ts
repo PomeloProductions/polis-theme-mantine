@@ -1,4 +1,4 @@
-import { createTheme } from '@mantine/core';
+import { createTheme, type MantineTheme } from '@mantine/core';
 import type { PolisTheme } from '@polis/react/theme/PolisTheme';
 
 /**
@@ -16,6 +16,25 @@ export const mantineTheme = createTheme({
   primaryColor: 'indigo',
   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
   defaultRadius: 'md',
+  components: {
+    Table: {
+      styles: (theme: MantineTheme) => ({
+        th: {
+          backgroundColor: theme.colors.gray[0],
+          borderBottom: `2px solid ${theme.colors.gray[3]}`,
+          padding: '1rem',
+        },
+        td: {
+          padding: '1rem',
+        },
+        tr: {
+          '&:hover': {
+            backgroundColor: theme.colors.gray[0],
+          },
+        },
+      }),
+    },
+  },
 });
 
 /**
