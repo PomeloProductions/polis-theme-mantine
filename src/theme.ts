@@ -56,6 +56,12 @@ export const theme: PolisTheme = {
     primary: '#4c6ef5',
     primaryHover: '#4263eb',
     primaryActive: '#3b5bdb',
+    // Mantine indigo[1] / indigo[2] — light tints of the primary, used for
+    // subtle hover backgrounds and selected-row hints on neutral surfaces.
+    primaryTint: '#dbe4ff',
+    primarySubtle: '#bac8ff',
+    // White reads cleanly on the indigo[6] primary used by buttons / badges.
+    primaryContrast: '#ffffff',
     surface: '#ffffff',
     surfaceAlt: '#f8f9fa',
     textPrimary: '#212529',
