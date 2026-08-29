@@ -186,6 +186,33 @@
   --color-navigation: #6600cc;
 }
 
+/*
+ * ── Polis dark tokens ──
+ * SCSS-only consumers (no <PolisProvider>) get dark mode by setting
+ * `data-mantine-color-scheme="dark"` (Mantine native) or
+ * `data-polis-color-scheme="dark"` on the root element. When <PolisProvider>
+ * is mounted it overwrites these inline on document.documentElement, so this
+ * block is the standalone default. Mirrors the `dark` set in src/theme.ts.
+ */
+:root[data-mantine-color-scheme='dark'],
+:root[data-polis-color-scheme='dark'] {
+  --polis-color-primary: #748ffc;
+  --polis-color-primary-hover: #5c7cfa;
+  --polis-color-primary-active: #4c6ef5;
+  --polis-color-primary-tint: #26314e;
+  --polis-color-primary-subtle: #1b2238;
+  --polis-color-primary-contrast: #11131a;
+  --polis-color-surface: #1a1b1e;
+  --polis-color-surface-alt: #25262b;
+  --polis-color-text-primary: #e9ecef;
+  --polis-color-text-muted: #909296;
+  --polis-color-border: #373a40;
+  --polis-color-success: #51cf66;
+  --polis-color-warning: #ffd43b;
+  --polis-color-danger: #ff6b6b;
+  --polis-color-info: #3bc9db;
+}
+
 /* Dark Theme */
 body.dark {
   --color-primary: #428cff;
