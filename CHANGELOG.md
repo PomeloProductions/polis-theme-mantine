@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/PomeloProductions/polis-theme-mantine/compare/v0.2.0...v0.3.0) (2026-08-30)
+
+
+### Features
+
+* Dark mode support ([55c93dd](https://github.com/PomeloProductions/polis-theme-mantine/commit/55c93ddc07305d3d1581669e33716c3759a50ae4))
+* Dark mode support ([1da56f7](https://github.com/PomeloProductions/polis-theme-mantine/commit/1da56f70fa0b5f9221959c3de99b5ae95d11a52e))
+
 ## [0.2.0](https://github.com/PomeloProductions/polis-theme-mantine/compare/v0.1.0...v0.2.0) (2026-06-22)
 
 
