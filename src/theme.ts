@@ -73,6 +73,34 @@ export const theme: PolisTheme = {
     info: '#15aabf',
   },
 
+  /**
+   * Dark colour tokens. Surfaces track Mantine's dark palette
+   * (`dark[7]` #1a1b1e body, `dark[6]` #25262b elevated) so the SCSS surface
+   * and Mantine's `data-mantine-color-scheme="dark"` components render in
+   * lockstep. The primary lightens to indigo[4] (#748ffc) so it keeps
+   * enough contrast against the near-black surfaces (WCAG AA for large text
+   * / UI, and used with `primaryContrast` #11131a for filled buttons).
+   */
+  dark: {
+    primary: '#748ffc',
+    primaryHover: '#5c7cfa',
+    primaryActive: '#4c6ef5',
+    // Deep indigo backgrounds for subtle/selected states on dark surfaces.
+    primaryTint: '#26314e',
+    primarySubtle: '#1b2238',
+    // Dark ink reads on the light indigo primary used for filled buttons.
+    primaryContrast: '#11131a',
+    surface: '#1a1b1e',
+    surfaceAlt: '#25262b',
+    textPrimary: '#e9ecef',
+    textMuted: '#909296',
+    border: '#373a40',
+    success: '#51cf66',
+    warning: '#ffd43b',
+    danger: '#ff6b6b',
+    info: '#3bc9db',
+  },
+
   fonts: {
     body: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     heading: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',

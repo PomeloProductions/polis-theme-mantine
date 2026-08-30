@@ -40,6 +40,26 @@ property and wraps children in `<MantineProvider>` using the theme's
 embedded `mantineTheme` override. Swap themes by changing only the
 import on the second line.
 
+## Dark mode
+
+This theme ships a full dark colour set (in `theme.dark`) whose surfaces track
+Mantine's dark palette (`dark[7]` #1a1b1e body, `dark[6]` #25262b elevated).
+`<PolisProvider>` (from `@polis/react` ≥ the dark-mode release) resolves the
+active scheme (`'light' | 'dark' | 'system'`), injects the matching token set,
+and sets `data-mantine-color-scheme` on `<html>` so Mantine components render
+dark in lockstep:
+
+```tsx
+<PolisProvider theme={theme} defaultAppliedColorScheme="system">
+  {children}
+</PolisProvider>
+```
+
+SCSS-only consumers (no `<PolisProvider>`) get dark by setting
+`data-mantine-color-scheme="dark"` or `data-polis-color-scheme="dark"` on the
+root element — `styles/variables.scss` overrides the `--polis-color-*` tokens
+under those selectors.
+
 ## Use the Mantine theme standalone
 
 If you only need the Mantine overrides:
