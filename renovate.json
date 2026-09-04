@@ -3,10 +3,9 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "description": "Hold TypeScript at v6: typescript-eslint@8 does not support TS 7 (its dependency ceiling). Revisit once typescript-eslint ships TS-7 support. See https://github.com/typescript-eslint/typescript-eslint/issues/10940",
       "matchPackageNames": ["typescript"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
+      "allowedVersions": "<7",
+      "description": "Restrict TypeScript to <7 (not a disable): typescript-eslint@8 has no TS 7 support (peer typescript <6.1.0, upstream issue #10940) and ts-jest caps <7, so TS 7 breaks lint+test. 6.x updates still flow. Widen/remove when doing the TS 7 upgrade."
     }
   ]
 }
