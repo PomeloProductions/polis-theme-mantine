@@ -18,6 +18,10 @@ on:
       - 'eslint.config.js'
       - '.github/workflows/code-checks.yaml'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   type-check:
     name: TypeScript (Node ${{ matrix.node }})
