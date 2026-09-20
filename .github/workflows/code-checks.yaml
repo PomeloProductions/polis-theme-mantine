@@ -25,7 +25,10 @@ concurrency:
 jobs:
   type-check:
     name: TypeScript (Node ${{ matrix.node }})
+    # Skip on draft PRs to avoid burning Actions minutes on work-in-progress.
+    if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
@@ -39,6 +42,10 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
+          # No lockfile in this repo; key the npm cache off package.json so
+          # setup-node can still restore ~/.npm between runs.
+          cache: npm
+          cache-dependency-path: package.json
 
       - name: Install dependencies
         # No lockfile or test runner here; install resolves devDeps
