@@ -4,15 +4,25 @@
   "description": "Card Collecting theme for Polis-family apps (SCSS variables, fonts, base elements, responsive helpers, Mantine theme overrides).",
   "type": "module",
   "license": "MIT",
+  "author": "Bryce Meyer <bryce13950@gmail.com> (Pomelo Productions)",
+  "homepage": "https://github.com/PomeloProductions/polis-theme-mantine",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PomeloProductions/polis-theme-mantine.git"
   },
+  "bugs": {
+    "url": "https://github.com/PomeloProductions/polis-theme-mantine/issues"
+  },
   "keywords": [
     "polis",
+    "pomelo",
     "theme",
-    "mantine"
+    "mantine",
+    "ui"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "src/index.ts",
   "types": "src/index.ts",
   "exports": {
