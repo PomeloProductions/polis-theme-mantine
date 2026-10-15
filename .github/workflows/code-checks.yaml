@@ -10,7 +10,6 @@ on:
       - 'eslint.config.js'
       - '.github/workflows/code-checks.yaml'
   pull_request:
-    branches: [main]
     paths:
       - 'src/**'
       - 'package.json'
