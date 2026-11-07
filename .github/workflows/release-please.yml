@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '26'
           registry-url: 'https://registry.npmjs.org'
       # This package publishes TypeScript/SCSS source directly (main/types/exports
       # point at ./src and `files` ships `src`): there is no build step and no
