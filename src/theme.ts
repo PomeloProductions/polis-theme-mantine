@@ -1,5 +1,5 @@
 import { createTheme, type MantineTheme } from '@mantine/core';
-import type { PolisTheme } from '@polis/react/theme/PolisTheme';
+import type { PolisTheme } from '@polisplatform/react/theme/PolisTheme';
 
 /**
  * Mantine theme overrides for the Card Collecting app.
@@ -9,7 +9,7 @@ import type { PolisTheme } from '@polis/react/theme/PolisTheme';
  * to the SCSS variables that drive the rest of the DOM.
  *
  * Exposed standalone for direct callers, and re-exported below at
- * `theme.mantineTheme` so `<PolisProvider>` from `@polis/react` can forward
+ * `theme.mantineTheme` so `<PolisProvider>` from `@polisplatform/react` can forward
  * it into Mantine.
  */
 export const mantineTheme = createTheme({
@@ -38,11 +38,11 @@ export const mantineTheme = createTheme({
 });
 
 /**
- * `@polis/theme-mantine` — the Polis token bundle that drives the Card
+ * `@polisplatform/theme-mantine` — the Polis token bundle that drives the Card
  * Collecting visual identity: Mantine's indigo palette, system fonts, and
  * the medium default radius.
  *
- * Pass this to `<PolisProvider theme={theme}>` from `@polis/react`.
+ * Pass this to `<PolisProvider theme={theme}>` from `@polisplatform/react`.
  *
  * Primary palette values track Mantine's `indigo` palette so the SCSS
  * surface stays in lockstep with the Mantine surface.
