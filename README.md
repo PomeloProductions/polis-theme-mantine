@@ -1,11 +1,11 @@
-# @polis/theme-mantine
+# @polisplatform/theme-mantine
 
 Card Collecting theme for Polis-family apps. Bundles the SCSS variables, font
 hooks, base element styles, and responsive helpers used by the Card Collecting
 web app, plus the Mantine `createTheme` override that ships alongside them.
 
-This is a sibling of [`@polis/react`](https://github.com/PomeloProductions/polis-react)
-and [`@polis/polis-laravel`](https://github.com/PomeloProductions/polis-laravel):
+This is a sibling of [`@polisplatform/react`](https://github.com/PomeloProductions/polis-react)
+and [`@polisplatform/polis-laravel`](https://github.com/PomeloProductions/polis-laravel):
 consumed via a `github:` dependency, pinned by tag.
 
 ## Install
@@ -15,20 +15,20 @@ In a consuming app's `package.json`:
 ```jsonc
 {
   "dependencies": {
-    "@polis/theme-mantine": "github:PomeloProductions/polis-theme-mantine#v0.1.0",
+    "@polisplatform/theme-mantine": "github:PomeloProductions/polis-theme-mantine#v0.1.0",
   },
 }
 ```
 
 ## Use the Polis theme (recommended)
 
-`@polis/theme-mantine` exports a `theme: PolisTheme` object that
-satisfies the canonical interface in `@polis/react/theme/PolisTheme`.
-Pass it to `<PolisProvider>` from `@polis/react`:
+`@polisplatform/theme-mantine` exports a `theme: PolisTheme` object that
+satisfies the canonical interface in `@polisplatform/react/theme/PolisTheme`.
+Pass it to `<PolisProvider>` from `@polisplatform/react`:
 
 ```tsx
-import { PolisProvider } from '@polis/react';
-import { theme } from '@polis/theme-mantine';
+import { PolisProvider } from '@polisplatform/react';
+import { theme } from '@polisplatform/theme-mantine';
 
 export function App({ children }) {
   return <PolisProvider theme={theme}>{children}</PolisProvider>;
@@ -44,7 +44,7 @@ import on the second line.
 
 This theme ships a full dark colour set (in `theme.dark`) whose surfaces track
 Mantine's dark palette (`dark[7]` #1a1b1e body, `dark[6]` #25262b elevated).
-`<PolisProvider>` (from `@polis/react` ≥ the dark-mode release) resolves the
+`<PolisProvider>` (from `@polisplatform/react` ≥ the dark-mode release) resolves the
 active scheme (`'light' | 'dark' | 'system'`), injects the matching token set,
 and sets `data-mantine-color-scheme` on `<html>` so Mantine components render
 dark in lockstep:
@@ -66,7 +66,7 @@ If you only need the Mantine overrides:
 
 ```tsx
 import { MantineProvider } from '@mantine/core';
-import { mantineTheme } from '@polis/theme-mantine';
+import { mantineTheme } from '@polisplatform/theme-mantine';
 
 export function App({ children }) {
   return (
@@ -83,15 +83,15 @@ Import the aggregate entrypoint, which pulls in fonts, variables, base
 elements, and responsive helpers:
 
 ```scss
-@import '@polis/theme-mantine/styles/main';
+@import '@polisplatform/theme-mantine/styles/main';
 ```
 
 Or pull partials individually:
 
 ```scss
-@import '@polis/theme-mantine/styles/variables';
-@import '@polis/theme-mantine/styles/elements';
-@import '@polis/theme-mantine/styles/responsive';
+@import '@polisplatform/theme-mantine/styles/variables';
+@import '@polisplatform/theme-mantine/styles/elements';
+@import '@polisplatform/theme-mantine/styles/responsive';
 ```
 
 ## Contents

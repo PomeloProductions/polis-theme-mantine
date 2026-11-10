@@ -3,7 +3,7 @@
   "release-type": "node",
   "packages": {
     ".": {
-      "package-name": "@polis/theme-mantine",
+      "package-name": "@polisplatform/theme-mantine",
       "include-component-in-tag": false,
       "changelog-path": "CHANGELOG.md",
       "release-as": null,

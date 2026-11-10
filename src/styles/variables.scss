@@ -4,9 +4,9 @@
  * Custom variables for the application theme
  *
  * The `--polis-*` block mirrors the token values exported from `theme.ts`
- * (`@polis/theme-mantine`) as CSS custom-property defaults. Consumers that
+ * (`@polisplatform/theme-mantine`) as CSS custom-property defaults. Consumers that
  * import just the SCSS — without going through `<PolisProvider>` from
- * `@polis/react` — still get a styled surface. When `<PolisProvider>` is
+ * `@polisplatform/react` — still get a styled surface. When `<PolisProvider>` is
  * mounted it will overwrite these on `document.documentElement`, so
  * runtime theme swaps still take precedence.
  */
