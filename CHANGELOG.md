@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/PomeloProductions/polis-theme-mantine/compare/v0.3.0...v0.3.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* Define primaryTint/primarySubtle CSS vars in light mode :root ([e7af1f9](https://github.com/PomeloProductions/polis-theme-mantine/commit/e7af1f9354932f0a25aa8c694f5c3606fb541e0f))
+* Define primaryTint/primarySubtle CSS vars in light mode :root ([092355b](https://github.com/PomeloProductions/polis-theme-mantine/commit/092355ba716dcdacccc0f7ed16508de377fa2d98))
+
 ## [0.3.0](https://github.com/PomeloProductions/polis-theme-mantine/compare/v0.2.0...v0.3.0) (2026-08-30)
 
 
